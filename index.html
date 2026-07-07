@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reyner & Partner's Wedding</title>
+  <style>
+    body { margin:0; font-family: 'Georgia', serif; color:#333; }
+
+    nav {
+      position: fixed; top:0; width:100%;
+      background:#b56576; padding:10px;
+      text-align:center; z-index:1000;
+    }
+    nav a {
+      color:#fff; margin:0 10px; text-decoration:none;
+      font-weight:bold; font-size:14px;
+    }
+
+    section {
+      padding:80px 20px; min-height:100vh;
+      text-align:center;
+      background-size: cover;
+      background-position: center;
+    }
+
+    #story { background-image: url('floral.jpg'); color:#fff; text-shadow:1px 1px 3px rgba(0,0,0,0.7); }
+    #details { background: linear-gradient(to bottom,#fffaf7,#f7e1d7); }
+    #program { background-image: url('weddingprogram.jpg'); color:#fff; text-shadow:1px 1px 3px rgba(0,0,0,0.7); }
+    #attire { background-image: url('weddingattire.jpg'); color:#fff; text-shadow:1px 1px 3px rgba(0,0,0,0.7); }
+    #venue { background-image: url('church.jpg'); color:#fff; text-shadow:1px 1px 3px rgba(0,0,0,0.7); }
+    #map { background:#fffaf7; }
+    #rsvp { background: #fffaf7; }
+
+    h1 { color:#b56576; margin-bottom:15px; }
+    #countdown { font-size:18px; margin:20px 0; }
+
+    form {
+      background:#fff; padding:20px; margin:auto; max-width:400px;
+      border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+    input, select, textarea {
+      width:100%; padding:10px; margin:8px 0;
+      border:1px solid #ccc; border-radius:5px;
+    }
+    button {
+      background:#b56576; color:#fff; border:none;
+      padding:12px; border-radius:5px; cursor:pointer;
+      width:100%;
+    }
+    button:hover { background:#8d3f4d; }
+    .map iframe { width:100%; height:300px; border:0; }
+
+    @media (max-width: 600px) {
+      nav a { font-size:12px; margin:0 5px; }
+      section { padding:60px 15px; }
+      h1 { font-size:22px; }
+      #countdown { font-size:16px; }
+      form { width:100%; padding:15px; }
+      input, select, textarea { font-size:14px; }
+      button { font-size:14px; padding:10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#story">Story</a>
+    <a href="#details">Details</a>
+    <a href="#program">Program</a>
+    <a href="#attire">Attire</a>
+    <a href="#venue">Venue</a>
+    <a href="#map">Map</a>
+    <a href="#rsvp">RSVP</a>
+  </nav>
+
+  <section id="story">
+    <h1>Our Love Story</h1>
+    <p>From strangers to forever partners...</p>
+  </section>
+
+  <section id="details">
+    <h1>Wedding Details</h1>
+    <p>Date: September 23, 2027</p>
+    <p>Time: 3:00 PM onwards</p>
+    <div id="countdown"></div>
+  </section>
+
+  <section id="program">
+    <h1>Program Timeline</h1>
+    <p>2:30 PM - Entourage Procession</p>
+    <p>3:00 PM - Wedding Ceremony</p>
+    <p>4:45 PM - Cocktail Hour</p>
+    <p>6:00 PM - Reception Entrance</p>
+    <p>6:30 PM - First Dance</p>
+  </section>
+
+  <section id="attire">
+    <h1>Attire Guide</h1>
+    <p>Suggested Colors: Dusty Blue · White · Beige · Neutral</p>
+  </section>
+
+  <section id="venue">
+    <h1>Venue</h1>
+    <p>San Pascual Baylon Parish Church (Obando Church), Bulacan</p>
+  </section>
+
+  <section id="map">
+    <h1>Google Map</h1>
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.123456789!2d120.936!3d14.709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b6c5b9f0b1a9%3A0x7a6d1f3f9f9f9f9f!2sSan%20Pascual%20Baylon%20Parish%20Church%20(Obando%20Church)!5e0!3m2!1sen!2sph!4v1720000000000"
+        allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="rsvp">
+    <h1>RSVP</h1>
+    <form id="rsvpForm">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <select name="attendance" required>
+        <option value="">Will you attend?</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <input type="number" name="guests" placeholder="Number of Guests" min="0">
+      <textarea name="message" placeholder="Message for the couple"></textarea>
+      <button type="submit">Submit RSVP</button>
+    </form>
+  </section>
+
+  <script>
+    // Countdown
+    const weddingDate = new Date("September 23, 2027 15:00:00").getTime();
+    const countdownElement = document.getElementById("countdown");
+    setInterval(function() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+      const days = Math.floor(distance / (1000*60*60*24));
+      const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+      const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+      countdownElement.innerHTML = 
+        "Countdown: " + days + " days " + hours + " hours " + minutes + " minutes";
+      if (distance < 0) countdownElement.innerHTML = "It's Wedding Day!";
+    }, 1000);
+
+    // Redirect after RSVP (basic)
+    document.getElementById("rsvpForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Thank you for your RSVP!"); 
+      // TODO: send data to server or Google Sheet
+    });
+  </script>
+
+</body>
+</html>
