@@ -40,15 +40,50 @@
       top: 0;
       z-index: 1000;
     }
-    nav a {
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+    }
+    nav ul li {
+      position: relative;
       margin: 0 20px;
+    }
+    nav ul li a {
       text-decoration: none;
       color: #555;
       font-weight: bold;
-      transition: color 0.3s;
       font-family: 'Playfair Display', serif;
+      transition: color 0.3s;
     }
-    nav a:hover {
+    nav ul li a:hover {
+      color: #8ec5fc;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 10px 0;
+      min-width: 180px;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul li {
+      margin: 0;
+      padding: 8px 15px;
+    }
+    nav ul li ul li a {
+      color: #444;
+      font-weight: normal;
+      font-family: 'Open Sans', sans-serif;
+    }
+    nav ul li ul li a:hover {
       color: #8ec5fc;
     }
     section {
@@ -109,16 +144,53 @@
 </head>
 <body>
 
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="wedding_song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
   <header>
     <h1>Russell & Alcelene's Wedding</h1>
     <p>September 23, 2026</p>
   </header>
 
   <nav>
-    <a href="#details">Details</a>
-    <a href="#countdown">Countdown</a>
-    <a href="#rsvp">RSVP</a>
-    <a href="#map">Venue</a>
+    <ul>
+      <li><a href="#details">Details</a>
+        <ul>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#attire">Attire Guide</a></li>
+          <li><a href="#venue">Venue Info</a></li>
+        </ul>
+      </li>
+      <li><a href="#ceremony">Ceremony</a>
+        <ul>
+          <li><a href="#entourage">Entourage</a></li>
+          <li><a href="#program">Program Flow</a></li>
+        </ul>
+      </li>
+      <li><a href="#reception">Reception</a>
+        <ul>
+          <li><a href="#menu">Dinner Menu</a></li>
+          <li><a href="#highlights">Program Highlights</a></li>
+        </ul>
+      </li>
+      <li><a href="#rsvp">RSVP</a>
+        <ul>
+          <li><a href="#rsvp">Form</a></li>
+          <li><a href="#guests">Guest List</a></li>
+        </ul>
+      </li>
+      <li><a href="#gallery">Gallery</a>
+        <ul>
+          <li><a href="#prenup">Prenup Shoot</a></li>
+          <li><a href="#engagement">Engagement Photos</a></li>
+          <li><a href="#weddingday">Wedding Day</a></li>
+        </ul>
+      </li>
+      <li><a href="#map">Venue Map</a></li>
+    </ul>
   </nav>
 
   <section id="details">
@@ -161,14 +233,4 @@
 
   <section id="map">
     <h2>Venue Map</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." 
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </section>
-
-  <footer>
-    <p>© 2026 Russell & Alcelene Wedding</p>
-  </footer>
-
-</body>
-</html>
+    <iframe src="https://www.google.com/maps/embed?pb=!1
