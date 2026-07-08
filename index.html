@@ -1,118 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Russell & Alcelene Wedding</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #444;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #eee;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #444;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px;
-      max-width: 800px;
-      margin: auto;
-    }
-    #map iframe {
-      width: 100%;
-      max-width: 400px;
-      aspect-ratio: 1/1;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      display: block;
-      margin: auto;
-    }
-    footer {
-      background: #444;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russell & Alcelene's Wedding</title>
+    <!-- Elegant Fonts Link -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@200;400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0b111e;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section Wrapper */
+        .hero-container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            /* Palitan ang URL sa ibaba para sa iyong background image */
+            background: linear-gradient(rgba(11, 17, 30, 0.85), rgba(11, 17, 30, 0.85)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            padding-bottom: 40px;
+        }
+
+        /* Top Navigation Bar */
+        .navbar {
+            width: 100%;
+            padding: 25px 20px;
+            background: linear-gradient(to bottom, rgba(11, 17, 30, 0.9), rgba(11, 17, 30, 0));
+            z-index: 10;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px 30px;
+            list-style: none;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        /* Main Content Box */
+        .main-content {
+            text-align: center;
+            padding: 20px;
+            z-index: 2;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .sub-title-top {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 25px;
+            font-weight: 200;
+        }
+        .couple-names {
+            font-family: 'Cinzel', serif;
+            font-size: 65px;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .ampersand {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 55px;
+            display: block;
+            margin: 5px 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .diamond-divider {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 25px 0;
+        }
+        .wedding-date {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .wedding-location {
+            font-style: italic;
+            font-weight: 200;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+
+        /* Border Box Wrapper for Event Type */
+        .event-details-box {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 40px;
+            display: inline-block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Countdown Section */
+        .countdown-section {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            margin-top: auto;
+            z-index: 2;
+        }
+        .countdown-title {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 20px;
+        }
+        .countdown-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+        }
+        .countdown-item {
+            display: flex;
+            align-items: baseline;
+        }
+        .countdown-number {
+            font-size: 45px;
+            font-weight: 200;
+            font-family: sans-serif; /* Clean numbers style */
+        }
+        .countdown-label {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-left: 5px;
+        }
+        .slash-divider {
+            font-size: 35px;
+            font-weight: 100;
+            color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Responsive Settings para sa Mobile Devices */
+        @media (max-width: 768px) {
+            .nav-links { gap: 10px 15px; }
+            .nav-links a { font-size: 9px; letter-spacing: 1px; }
+            .couple-names { font-size: 45px; }
+            .ampersand { font-size: 40px; }
+            .countdown-number { font-size: 32px; }
+            .slash-divider { font-size: 24px; }
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Russell & Alcelene's Wedding</h1>
-    <p>September 26, 2026</p>
-  </header>
+    <div class="hero-container">
+        
+        <!-- Navigation Menu Section -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#story">Story</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="#entourage">Entourage</a></li>
+                <li><a href="#attire">Attire</a></li>
+                <li><a href="#gifts">Gifts</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+            </ul>
+        </nav>
 
-  <nav>
-    <a href="#details">Details</a>
-    <a href="#countdown">Countdown</a>
-    <a href="#rsvp">RSVP</a>
-    <a href="#map">Venue</a>
-  </nav>
+        <!-- Main Names & Details Section -->
+        <div class="main-content">
+            <div class="sub-title-top">Together with their families</div>
+            <h1 class="couple-names">
+                Russell
+                <span class="ampersand">&</span>
+                Alcelene
+            </h1>
+            
+            <div class="diamond-divider">✦</div>
+            
+            <div class="wedding-date">Wednesday, September 23, 2026</div>
+            <div class="wedding-location">National Shrine of Our Lady of the Immaculate Concepcion of Salambao - Obando Church</div>
+            
+            <div class="event-details-box">
+                CATHOLIC WEDDING &bull; CHURCH CEREMONY
+            </div>
+        </div>
 
-  <section id="details">
-    <h2>Wedding Details</h2>
-    <p>Join us as we celebrate our wedding day at National Shrine of Our Lady of the Immaculate Concepcion of Salambao - Obando Church.</p>
-  </section>
+        <!-- Live Countdown Section -->
+        <div class="countdown-section">
+            <div class="countdown-title">Counting down to forever</div>
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">000</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="slash-divider">/</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="slash-divider">/</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="mins">00</span>
+                    <span class="countdown-label">Mins</span>
+                </div>
+                <div class="slash-divider">/</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="secs">00</span>
+                    <span class="countdown-label">Secs</span>
+                </div>
+            </div>
+        </div>
 
-  <section id="countdown">
-    <h2>Countdown</h2>
-    <p id="timer"></p>
+    </div>
+
+    <!-- Live Countdown Automated Script -->
     <script>
-      const weddingDate = new Date("September 23, 2026 08:00:00").getTime();
-      const x = setInterval(function() {
-        const now = new Date().getTime();
-        const distance = weddingDate - now;
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById("timer").innerHTML =
-          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("timer").innerHTML = "It's Wedding Day!";
-        }
-      }, 1000);
+        const targetDate = new Date("September 23, 2026 00:00:00").getTime();
+
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference < 0) {
+                clearInterval(countdownInterval);
+                document.querySelector(".countdown-section").innerHTML = "<div class='countdown-title'>Today is the Big Day!</div>";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(3, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("mins").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("secs").innerText = String(seconds).padStart(2, '0');
+        }, 1000);
     </script>
-  </section>
-
-  <section id="rsvp">
-    <h2>RSVP</h2>
-    <p>Please confirm your attendance below:</p>
-    <!-- Embed code from Google Form -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScRkpR0EtUNXcvJPZcaPuwZKu95CJSZoNGE0otvzWyFoyyGCw/viewform?embedded=true"
-            width="640" height="845" frameborder="0" marginheight="0" marginwidth="0">
-      Loading…
-    </iframe>
-  </section>
-
-  <section id="map">
-    <h2>Venue Map</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." 
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </section>
-
-  <footer>
-    <p>© 2026 Russell & Alcelene Wedding</p>
-  </footer>
 
 </body>
 </html>
