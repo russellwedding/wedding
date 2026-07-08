@@ -33,6 +33,7 @@
       background: #333;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
     }
     nav ul li {
       position: relative;
@@ -78,9 +79,21 @@
     }
     iframe {
       border: none;
+    }
+    .map-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 400px;   /* limit width for mobile */
+      aspect-ratio: 1/1;  /* square shape */
+      border: 3px solid #b48e5c;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .map-container iframe {
       width: 100%;
-      max-width: 640px;
-      height: 800px;
+      height: 100%;
     }
     footer {
       background: #333;
@@ -133,7 +146,13 @@
 
   <section id="venue">
     <h2>Venue Map</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..."></iframe>
+    <div class="map-container">
+      <!-- Replace with actual Google Maps embed link -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!...YOUR_MAP_EMBED..."
+              allowfullscreen=""
+              loading="lazy">
+      </iframe>
+    </div>
   </section>
 
   <section id="attire">
