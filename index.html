@@ -6,42 +6,87 @@
   <title>Russell & Alcelene Wedding</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
+      background: linear-gradient(to bottom, #fff, #f7f7f7);
       color: #333;
     }
     header {
-      background: #444;
+      background: linear-gradient(135deg, #b993d6, #8ca6db);
       color: #fff;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
     }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+    }
     nav {
-      background: #eee;
-      padding: 10px;
+      background: #fff;
+      padding: 15px;
       text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       margin: 0 15px;
       text-decoration: none;
       color: #444;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #8ca6db;
     }
     section {
-      padding: 40px;
-      max-width: 800px;
+      padding: 60px 20px;
+      max-width: 900px;
       margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    section p {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #666;
+    }
+    #countdown #timer {
+      font-size: 1.5em;
+      text-align: center;
+      font-weight: bold;
+      color: #8ca6db;
+    }
+    .form-container {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: auto;
+    }
+    .form-container iframe {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
     }
     #map iframe {
       width: 100%;
-      max-width: 400px;
-      aspect-ratio: 1/1;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      display: block;
-      margin: auto;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     footer {
       background: #444;
@@ -96,11 +141,12 @@
   <section id="rsvp">
     <h2>RSVP</h2>
     <p>Please confirm your attendance below:</p>
-    <!-- Embed code from Google Form -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScRkpR0EtUNXcvJPZcaPuwZKu95CJSZoNGE0otvzWyFoyyGCw/viewform?embedded=true"
-            width="640" height="845" frameborder="0" marginheight="0" marginwidth="0">
-      Loading…
-    </iframe>
+    <div class="form-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScRkpR0EtUNXcvJPZcaPuwZKu95CJSZoNGE0otvzWyFoyyGCw/viewform?embedded=true"
+              width="640" height="845" frameborder="0" marginheight="0" marginwidth="0">
+        Loading…
+      </iframe>
+    </div>
   </section>
 
   <section id="map">
