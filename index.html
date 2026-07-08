@@ -4,152 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Russell & Alcelene Wedding</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Open Sans', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #fdfdfd;
-      color: #444;
-    }
-    header {
-      background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
-      color: #fff;
-      padding: 50px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      letter-spacing: 2px;
-    }
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.3em;
-      font-style: italic;
-    }
-    nav {
-      background: #fff;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: inline-flex;
-    }
-    nav ul li {
-      position: relative;
-      margin: 0 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #555;
-      font-weight: bold;
-      font-family: 'Playfair Display', serif;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #8ec5fc;
-    }
-    nav ul li:hover > ul {
-      display: block;
-    }
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      padding: 10px 0;
-      min-width: 180px;
-      z-index: 999;
-    }
-    nav ul li ul li {
-      margin: 0;
-      padding: 8px 15px;
-    }
-    nav ul li ul li a {
-      color: #444;
-      font-weight: normal;
-      font-family: 'Open Sans', sans-serif;
-    }
-    nav ul li ul li a:hover {
-      color: #8ec5fc;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    section h2 {
-      text-align: center;
-      font-size: 2.2em;
-      margin-bottom: 20px;
-      font-family: 'Playfair Display', serif;
+      background: #f9f9f9;
       color: #333;
     }
-    section p {
+    header {
+      background: #444;
+      color: #fff;
+      padding: 20px;
       text-align: center;
-      margin-bottom: 30px;
-      color: #666;
-      font-style: italic;
     }
-    #countdown #timer {
-      font-size: 1.8em;
+    nav {
+      background: #eee;
+      padding: 10px;
       text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #444;
       font-weight: bold;
-      color: #8ec5fc;
-      font-family: 'Playfair Display', serif;
     }
-    .form-container {
-      background: #fff;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      max-width: 700px;
+    section {
+      padding: 40px;
+      max-width: 800px;
       margin: auto;
-      border: 2px solid #e0c3fc;
-    }
-    .form-container iframe {
-      width: 100%;
-      border: none;
-      border-radius: 12px;
     }
     #map iframe {
       width: 100%;
-      height: 450px;
-      border: none;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      aspect-ratio: 1/1;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      display: block;
+      margin: auto;
     }
     footer {
-      background: #333;
+      background: #444;
       color: #fff;
       text-align: center;
-      padding: 25px;
+      padding: 20px;
       margin-top: 40px;
-      font-family: 'Open Sans', sans-serif;
     }
   </style>
 </head>
 <body>
-
-  <!-- Background Music -->
-  <audio autoplay loop>
-    <source src="wedding_song.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
 
   <header>
     <h1>Russell & Alcelene's Wedding</h1>
@@ -157,62 +60,15 @@
   </header>
 
   <nav>
-    <ul>
-      <li><a href="#details">Details</a>
-        <ul>
-          <li><a href="#timeline">Timeline</a></li>
-          <li><a href="#attire">Attire Guide</a></li>
-          <li><a href="#venue">Venue Info</a></li>
-        </ul>
-      </li>
-      <li><a href="#ceremony">Ceremony</a>
-        <ul>
-          <li><a href="#entourage">Entourage</a></li>
-          <li><a href="#program">Program Flow</a></li>
-        </ul>
-      </li>
-      <li><a href="#reception">Reception</a>
-        <ul>
-          <li><a href="#menu">Dinner Menu</a></li>
-          <li><a href="#highlights">Program Highlights</a></li>
-        </ul>
-      </li>
-      <li><a href="#gallery">Gallery</a>
-        <ul>
-          <li><a href="#prenup">Prenup Shoot</a></li>
-          <li><a href="#engagement">Engagement Photos</a></li>
-          <li><a href="#weddingday">Wedding Day</a></li>
-        </ul>
-      </li>
-      <li><a href="#rsvp">RSVP</a>
-        <ul>
-          <li><a href="#rsvp">Form</a></li>
-          <li><a href="#guests">Guest List</a></li>
-        </ul>
-      </li>
-      <li><a href="#countdown">Countdown</a></li>
-      <li><a href="#map">Venue Map</a></li>
-    </ul>
+    <a href="#details">Details</a>
+    <a href="#countdown">Countdown</a>
+    <a href="#rsvp">RSVP</a>
+    <a href="#map">Venue</a>
   </nav>
 
   <section id="details">
     <h2>Wedding Details</h2>
-    <p>Join us as we celebrate our wedding day at the National Shrine of Our Lady of the Immaculate Concepcion of Salambao – Obando Church, Bulacan.</p>
-  </section>
-
-  <section id="ceremony">
-    <h2>Ceremony</h2>
-    <p>Witness the sacred vows and the entourage procession.</p>
-  </section>
-
-  <section id="reception">
-    <h2>Reception</h2>
-    <p>Celebrate with us through dinner, music, and program highlights.</p>
-  </section>
-
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <p>Memories from prenup, engagement, and the wedding day.</p>
+    <p>Join us as we celebrate our wedding day at San Isidro Labrador Parish Church, Valenzuela City.</p>
   </section>
 
   <section id="countdown">
@@ -239,3 +95,24 @@
 
   <section id="rsvp">
     <h2>RSVP</h2>
+    <p>Please confirm your attendance below:</p>
+    <!-- Embed code from Google Form -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScRkpR0EtUNXcvJPZcaPuwZKu95CJSZoNGE0otvzWyFoyyGCw/viewform?embedded=true"
+            width="640" height="845" frameborder="0" marginheight="0" marginwidth="0">
+      Loading…
+    </iframe>
+  </section>
+
+  <section id="map">
+    <h2>Venue Map</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <footer>
+    <p>© 2026 Russell & Alcelene Wedding</p>
+  </footer>
+
+</body>
+</html>
