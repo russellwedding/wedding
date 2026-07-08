@@ -60,19 +60,20 @@
     nav ul li a:hover {
       color: #8ec5fc;
     }
+    nav ul li:hover > ul {
+      display: block;
+    }
     nav ul li ul {
       display: none;
       position: absolute;
-      top: 35px;
+      top: 100%;
       left: 0;
       background: #fff;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       border-radius: 8px;
       padding: 10px 0;
       min-width: 180px;
-    }
-    nav ul li:hover ul {
-      display: block;
+      z-index: 999;
     }
     nav ul li ul li {
       margin: 0;
@@ -230,4 +231,10 @@
           days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("timer").innerHTML = "It's Wedding Day
+          document.getElementById("timer").innerHTML = "It's Wedding Day!";
+        }
+      }, 1000);
+    </script>
+  </section>
+
+  <section id="rsvp">
