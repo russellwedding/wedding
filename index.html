@@ -38,7 +38,6 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            /* Maaari mong palitan ang URL sa ibaba para sa iyong background image */
             background: linear-gradient(rgba(11, 17, 30, 0.85), rgba(11, 17, 30, 0.85)), 
                         url('https://unsplash.com') no-repeat center center/cover;
             padding-bottom: 40px;
@@ -119,10 +118,14 @@
         .wedding-location {
             font-style: italic;
             font-weight: 200;
-            font-size: 16px;
+            font-size: 15px;
             color: rgba(255, 255, 255, 0.8);
             letter-spacing: 1px;
             margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
         }
         .event-details-box {
             border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -155,6 +158,8 @@
             justify-content: space-around;
             align-items: center;
             position: relative;
+            max-width: 450px;
+            margin: 0 auto;
         }
         .countdown-item {
             display: flex;
@@ -239,8 +244,9 @@
             .countdown-number { font-size: 32px; }
             .slash-divider { font-size: 24px; }
             .rsvp-title { font-size: 28px; }
+            .wedding-location { font-size: 13px; padding: 0 10px; }
             .form-container { padding: 10px; border-radius: 12px; }
-            .iframe-wrapper { height: 960px; } /* Mas mahaba sa mobile para hindi maputol ang form */
+            .iframe-wrapper { height: 960px; }
         }
     </style>
 </head>
@@ -275,15 +281,15 @@
             
             <div class="diamond-divider">✦</div>
             
-            <div class="wedding-date">Wednesday, September 23, 2026</div>
-            <div class="wedding-location">San Isidro Labrador Parish Church, Valenzuela City</div>
+            <div class="wedding-date">Saturday, September 26, 2026</div>
+            <div class="wedding-location">National Shrine of Our Lady of the Immaculate Concepcion of Salambao - Obando Church</div>
             
             <div class="event-details-box">
                 CATHOLIC WEDDING &bull; CHURCH CEREMONY
             </div>
         </div>
 
-        <!-- Live Countdown -->
+        <!-- Live Countdown Area -->
         <div class="countdown-section">
             <div class="countdown-title">Counting down to forever</div>
             <div class="countdown-container">
@@ -297,5 +303,3 @@
                     <span class="countdown-label">Hours</span>
                 </div>
                 <div class="slash-divider">/</div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="mins">00</span>
