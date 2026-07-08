@@ -2,155 +2,176 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Russell & Alcelene's Wedding</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family: 'Georgia', serif; color:#333; }
-
-    nav {
-      position: fixed; top:0; width:100%;
-      background:#b56576; padding:10px;
-      text-align:center; z-index:1000;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fdfdfd;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
     }
-    nav a {
-      color:#fff; margin:0 10px; text-decoration:none;
-      font-weight:bold; font-size:14px;
+    header {
+      background: #b48e5c;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
     }
-
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin: 0;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: #333;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+    nav ul li:hover {
+      background: #444;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #444;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul li a {
+      padding: 10px 20px;
+    }
     section {
-      padding:80px 20px; min-height:100vh;
-      text-align:center;
-      background-size: cover;
-      background-position: center;
+      padding: 40px;
+      text-align: center;
     }
-
-    #story { background-image: url('floral.jpg'); color:#fff; text-shadow:1px 1px 3px rgba(0,0,0,0.7); }
-    #details { background: linear-gradient(to bottom,#fffaf7,#f7e1d7); }
-    #program { background-image: url('weddingprogram.jpg'); color:#fff; text-shadow:1px 1px 3px rgba(0,0,0,0.7); }
-    #attire { background-image: url('weddingattire.jpg'); color:#fff; text-shadow:1px 1px 3px rgba(0,0,0,0.7); }
-    #venue { background-image: url('church.jpg'); color:#fff; text-shadow:1px 1px 3px rgba(0,0,0,0.7); }
-    #map { background:#fffaf7; }
-    #rsvp { background: #fffaf7; }
-
-    h1 { color:#b56576; margin-bottom:15px; }
-    #countdown { font-size:18px; margin:20px 0; }
-
-    form {
-      background:#fff; padding:20px; margin:auto; max-width:400px;
-      border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      margin-bottom: 20px;
     }
-    input, select, textarea {
-      width:100%; padding:10px; margin:8px 0;
-      border:1px solid #ccc; border-radius:5px;
+    #timer {
+      font-size: 1.5em;
+      color: #b48e5c;
+      font-weight: bold;
     }
-    button {
-      background:#b56576; color:#fff; border:none;
-      padding:12px; border-radius:5px; cursor:pointer;
-      width:100%;
+    iframe {
+      border: none;
+      width: 100%;
+      max-width: 640px;
+      height: 800px;
     }
-    button:hover { background:#8d3f4d; }
-    .map iframe { width:100%; height:300px; border:0; }
-
-    @media (max-width: 600px) {
-      nav a { font-size:12px; margin:0 5px; }
-      section { padding:60px 15px; }
-      h1 { font-size:22px; }
-      #countdown { font-size:16px; }
-      form { width:100%; padding:15px; }
-      input, select, textarea { font-size:14px; }
-      button { font-size:14px; padding:10px; }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Russell & Alcelene's Wedding</h1>
+    <p>September 23, 2026</p>
+  </header>
 
   <nav>
-    <a href="#story">Story</a>
-    <a href="#details">Details</a>
-    <a href="#program">Program</a>
-    <a href="#attire">Attire</a>
-    <a href="#venue">Venue</a>
-    <a href="#map">Map</a>
-    <a href="#rsvp">RSVP</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="homepage.html">Wedding Details</a>
+        <ul>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#venue">Venue Map</a></li>
+          <li><a href="#attire">Attire Guide</a></li>
+        </ul>
+      </li>
+      <li><a href="thankyou.html">RSVP</a></li>
+      <li>
+        <a href="#">Extras</a>
+        <ul>
+          <li><a href="#countdown">Countdown</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#music">Music</a></li>
+        </ul>
+      </li>
+    </ul>
   </nav>
 
-  <section id="story">
-    <h1>Our Love Story</h1>
-    <p>From strangers to forever partners...</p>
+  <section id="countdown">
+    <h2>Countdown to the Wedding</h2>
+    <p id="timer"></p>
   </section>
 
-  <section id="details">
-    <h1>Wedding Details</h1>
-    <p>Date: September 23, 2027</p>
-    <p>Time: 3:00 PM onwards</p>
-    <div id="countdown"></div>
-  </section>
-
-  <section id="program">
-    <h1>Program Timeline</h1>
-    <p>2:30 PM - Entourage Procession</p>
-    <p>3:00 PM - Wedding Ceremony</p>
-    <p>4:45 PM - Cocktail Hour</p>
-    <p>6:00 PM - Reception Entrance</p>
-    <p>6:30 PM - First Dance</p>
-  </section>
-
-  <section id="attire">
-    <h1>Attire Guide</h1>
-    <p>Suggested Colors: Dusty Blue · White · Beige · Neutral</p>
+  <section id="timeline">
+    <h2>Wedding Day Timeline</h2>
+    <p>📍 Ceremony at Obando Church – 9:00 AM</p>
+    <p>🍽️ Reception follows immediately after</p>
+    <p>🎶 Program highlights: First Dance, Cake Cutting, Bouquet Toss</p>
   </section>
 
   <section id="venue">
-    <h1>Venue</h1>
-    <p>San Pascual Baylon Parish Church (Obando Church), Bulacan</p>
+    <h2>Venue Map</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..."></iframe>
   </section>
 
-  <section id="map">
-    <h1>Google Map</h1>
-    <div class="map">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.123456789!2d120.936!3d14.709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b6c5b9f0b1a9%3A0x7a6d1f3f9f9f9f9f!2sSan%20Pascual%20Baylon%20Parish%20Church%20(Obando%20Church)!5e0!3m2!1sen!2sph!4v1720000000000"
-        allowfullscreen="" loading="lazy">
-      </iframe>
-    </div>
+  <section id="attire">
+    <h2>Attire Guide</h2>
+    <p>Formal attire requested. Gentlemen in barong or suit, ladies in gown.</p>
   </section>
 
   <section id="rsvp">
-    <h1>RSVP</h1>
-    <form id="rsvpForm">
-      <input type="text" name="name" placeholder="Your Full Name" required>
-      <select name="attendance" required>
-        <option value="">Will you attend?</option>
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-      </select>
-      <input type="number" name="guests" placeholder="Number of Guests" min="0">
-      <textarea name="message" placeholder="Message for the couple"></textarea>
-      <button type="submit">Submit RSVP</button>
-    </form>
+    <h2>RSVP</h2>
+    <p>Please confirm your attendance below:</p>
+    <!-- Replace FORM_ID with your actual Google Form embed link -->
+    <iframe src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true">Loading…</iframe>
   </section>
 
+  <footer>
+    <p>Russell & Alcelene's Wedding © 2026</p>
+  </footer>
+
   <script>
-    // Countdown
-    const weddingDate = new Date("September 23, 2027 15:00:00").getTime();
-    const countdownElement = document.getElementById("countdown");
-    setInterval(function() {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
-      const days = Math.floor(distance / (1000*60*60*24));
-      const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
-      const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
-      countdownElement.innerHTML = 
-        "Countdown: " + days + " days " + hours + " hours " + minutes + " minutes";
-      if (distance < 0) countdownElement.innerHTML = "It's Wedding Day!";
+    // Wedding date countdown
+    var weddingDate = new Date("September 23, 2026 09:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = weddingDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "It's Wedding Day!";
+      }
     }, 1000);
-
-    // Redirect after RSVP (basic)
-    document.getElementById("rsvpForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      alert("Thank you for your RSVP!"); 
-      // TODO: send data to server or Google Sheet
-    });
   </script>
-
 </body>
 </html>
