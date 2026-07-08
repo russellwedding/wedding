@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Russell & Alcelene's Wedding</title>
-    <!-- Elegant Fonts Link -->
+    
+    <!-- Elegant Wedding Fonts Link -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@200;400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
     
     <style>
-        /* Base Reset */
+        /* Base Reset & Smooth Scrolling */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
         }
         body {
             font-family: 'Montserrat', sans-serif;
@@ -23,7 +27,9 @@
             overflow-x: hidden;
         }
 
-        /* Hero Section Wrapper */
+        /* ----------------------------------
+           HERO SECTION STYLES
+        ------------------------------------- */
         .hero-container {
             position: relative;
             width: 100%;
@@ -32,7 +38,7 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            /* Palitan ang URL sa ibaba para sa iyong background image */
+            /* Maaari mong palitan ang URL sa ibaba para sa iyong background image */
             background: linear-gradient(rgba(11, 17, 30, 0.85), rgba(11, 17, 30, 0.85)), 
                         url('https://unsplash.com') no-repeat center center/cover;
             padding-bottom: 40px;
@@ -67,7 +73,7 @@
             color: #ffffff;
         }
 
-        /* Main Content Box */
+        /* Main Content Box (Names & Details) */
         .main-content {
             text-align: center;
             padding: 20px;
@@ -118,8 +124,6 @@
             letter-spacing: 1px;
             margin-bottom: 30px;
         }
-
-        /* Border Box Wrapper for Event Type */
         .event-details-box {
             border-top: 1px solid rgba(255, 255, 255, 0.2);
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -131,7 +135,7 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
-        /* Countdown Section */
+        /* Countdown Area */
         .countdown-section {
             width: 100%;
             max-width: 600px;
@@ -159,7 +163,7 @@
         .countdown-number {
             font-size: 45px;
             font-weight: 200;
-            font-family: sans-serif; /* Clean numbers style */
+            font-family: sans-serif;
         }
         .countdown-label {
             font-size: 9px;
@@ -174,22 +178,78 @@
             color: rgba(255, 255, 255, 0.15);
         }
 
-        /* Responsive Settings para sa Mobile Devices */
+        /* ----------------------------------
+           RSVP SECTION STYLES
+        ------------------------------------- */
+        .rsvp-section {
+            padding: 100px 20px;
+            background-color: #0b111e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .rsvp-title {
+            font-family: 'Cinzel', serif;
+            font-size: 36px;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+        .rsvp-subtitle {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 50px;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 680px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+        }
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            height: 850px;
+            overflow: hidden;
+        }
+        .iframe-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ----------------------------------
+           RESPONSIVE DESIGN (MOBILE)
+        ------------------------------------- */
         @media (max-width: 768px) {
-            .nav-links { gap: 10px 15px; }
+            .nav-links { gap: 12px 18px; }
             .nav-links a { font-size: 9px; letter-spacing: 1px; }
             .couple-names { font-size: 45px; }
             .ampersand { font-size: 40px; }
             .countdown-number { font-size: 32px; }
             .slash-divider { font-size: 24px; }
+            .rsvp-title { font-size: 28px; }
+            .form-container { padding: 10px; border-radius: 12px; }
+            .iframe-wrapper { height: 960px; } /* Mas mahaba sa mobile para hindi maputol ang form */
         }
     </style>
 </head>
 <body>
 
+    <!-- 1. HERO SECTION -->
     <div class="hero-container">
         
-        <!-- Navigation Menu Section -->
+        <!-- Navigation Menu -->
         <nav class="navbar">
             <ul class="nav-links">
                 <li><a href="#story">Story</a></li>
@@ -204,7 +264,7 @@
             </ul>
         </nav>
 
-        <!-- Main Names & Details Section -->
+        <!-- Couple Banner Info -->
         <div class="main-content">
             <div class="sub-title-top">Together with their families</div>
             <h1 class="couple-names">
@@ -215,15 +275,15 @@
             
             <div class="diamond-divider">✦</div>
             
-            <div class="wedding-date">Wednesday, September 26, 2026</div>
-            <div class="wedding-location">National Shrine of Our Lady of the Immaculate Concepcion of Salambao - Obando Church</div>
+            <div class="wedding-date">Wednesday, September 23, 2026</div>
+            <div class="wedding-location">San Isidro Labrador Parish Church, Valenzuela City</div>
             
             <div class="event-details-box">
                 CATHOLIC WEDDING &bull; CHURCH CEREMONY
             </div>
         </div>
 
-        <!-- Live Countdown Section -->
+        <!-- Live Countdown -->
         <div class="countdown-section">
             <div class="countdown-title">Counting down to forever</div>
             <div class="countdown-container">
@@ -239,43 +299,3 @@
                 <div class="slash-divider">/</div>
                 <div class="countdown-item">
                     <span class="countdown-number" id="mins">00</span>
-                    <span class="countdown-label">Mins</span>
-                </div>
-                <div class="slash-divider">/</div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="secs">00</span>
-                    <span class="countdown-label">Secs</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Live Countdown Automated Script -->
-    <script>
-        const targetDate = new Date("September 23, 2026 00:00:00").getTime();
-
-        const countdownInterval = setInterval(function() {
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            if (difference < 0) {
-                clearInterval(countdownInterval);
-                document.querySelector(".countdown-section").innerHTML = "<div class='countdown-title'>Today is the Big Day!</div>";
-                return;
-            }
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = String(days).padStart(3, '0');
-            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-            document.getElementById("mins").innerText = String(minutes).padStart(2, '0');
-            document.getElementById("secs").innerText = String(seconds).padStart(2, '0');
-        }, 1000);
-    </script>
-
-</body>
-</html>
